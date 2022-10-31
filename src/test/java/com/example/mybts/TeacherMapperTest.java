@@ -121,7 +121,7 @@ public class TeacherMapperTest {
         page=teacherMapper.selectPage(page,new QueryWrapper<Teacher>().like("name","王")
                 .orderByDesc("id"));
         System.out.println("总条数-->"+page.getTotal());
-
+        System.out.println("当前页面-->"+page.getCurrent());
         System.out.println("当前每页显示数-->"+page.getSize());
         System.out.println(page.getRecords());
     }
